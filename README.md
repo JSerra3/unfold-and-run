@@ -1,17 +1,21 @@
-# Unfold and Run
+# FLOW CHARTS
 
-An expression taken apart into the function machine it stands for, then numbers run through that machine into a T-table, and the table's points put on a graph.
+(Formerly Unfold and Run.) Type an expression, a function or an equation on an old CRT console and watch it become a flow chart. You can run numbers forward through it into a T-table and a graph, or put an answer in OUTPUT and work it backwards to x.
 
-Open: https://jserra3.github.io/unfold-and-run/
+Open: https://www.everyonelovesmath.com/apps/unfold-and-run/ (also https://jserra3.github.io/unfold-and-run/)
 
-Set a problem with a link: https://jserra3.github.io/unfold-and-run/?expr=2x%2B8&x=-2,-1,0,1,2
+Start on a problem with a link (this skips the title screen): `?expr=2x%2B8` for an expression, `?expr=y%3D2x-3` for a function, or `?expr=2x%2B8%3D20` for an equation. For an equation, its number goes into OUTPUT and the machine works backwards to x.
 
-Solve an equation: https://jserra3.github.io/unfold-and-run/?expr=2x%2B8%3D20 — the x side unfolds into the machine, then 20 goes into OUTPUT and the machine works backwards to x.
+On the screen: double-click the card to change the problem. Click whatever glows to take the next step, and double-click to run the rest. Double-click INPUT or OUTPUT to type a number. The red orb undoes a step.
 
-Click things: the card to type a new expression (y = …, f(x) = …, or an equation), INPUT to put a number in, OUTPUT to put an output in and work backwards. Working back through a square or an absolute value gives both answers (±), and every answer goes in the table.
+The console controls:
+- MODE: AUTO or STEP.
+- BACK: undoes a step.
+- RESET: starts the problem over. Press it twice in a row to go back to the title screen.
+- COMPLEX: turns on complex answers. Its lamp lights when the problem has some.
+- DISPLAY: switches between a dark and a light screen.
+- SPEED: sets how fast the animations run.
 
-Keys: → / Space / Page Down = next · ← / Page Up = back · P = play · type a number to run it · O = an output to work back · E = change the expression · G = graph the table (and back) · M = settings · F = full screen
+Keys: → / Space next · ← back · P play · G graph · E change the problem · H screen grunge · C screen curve · M settings · F full screen
 
-On the graph, each Next plots the next row of the table: the point starts on the x-axis at x and rises (or sinks) straight to y. Turn on "draw the line" in settings (or add `&line=1` to the link) and one more Next draws the line through the points: solid across the x's the table covers, lighter beyond them, where none of the points say how it behaves.
-
-Built from the elm-obs Unfold and Run It apps by `tools/build-unfold-run.mjs`.
+`index.html` is the whole app in one file, built by `tools/build-unfold-run.mjs` from Joey's local FLOW CHARTS source (unfold-and-run-vector).
